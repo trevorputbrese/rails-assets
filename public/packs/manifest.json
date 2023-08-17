@@ -1,0 +1,19 @@
+{
+  "application.js": "/packs/js/application.js",
+  "entrypoints": {
+    "application": {
+      "assets": {
+        "js": [
+          "/packs/js/runtime.js",
+          "/packs/js/vendors-node_modules_rails_ujs_lib_assets_compiled_rails-ujs_js-node_modules_webpack-dev-serv-a162a8.js",
+          "/packs/js/application.js"
+        ]
+      }
+    }
+  },
+  "js/application.js.map": "/packs/js/application.js.map",
+  "js/runtime.js.map": "/packs/js/runtime.js.map",
+  "js/vendors-node_modules_rails_ujs_lib_assets_compiled_rails-ujs_js-node_modules_webpack-dev-serv-a162a8.js": "/packs/js/vendors-node_modules_rails_ujs_lib_assets_compiled_rails-ujs_js-node_modules_webpack-dev-serv-a162a8.js",
+  "js/vendors-node_modules_rails_ujs_lib_assets_compiled_rails-ujs_js-node_modules_webpack-dev-serv-a162a8.js.map": "/packs/js/vendors-node_modules_rails_ujs_lib_assets_compiled_rails-ujs_js-node_modules_webpack-dev-serv-a162a8.js.map",
+  "runtime.js": "/packs/js/runtime.js"
+}
