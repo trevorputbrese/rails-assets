@@ -1,0 +1,7 @@
+    value: full-jammy
+  serviceClaims:
+   - name: postgresql-1
+     ref:
+       apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+       kind: ClassClaim 
+       name: postgresql-1

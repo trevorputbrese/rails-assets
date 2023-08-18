@@ -1,0 +1,25 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: rails-asset-demo
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+    app.kubernetes.io/part-of: rails-asset-demo
+spec:
+  params:
+  - name: clusterBuilder
+    value: full-jammy
+  serviceClaims:
+   - name: postgresql-1
+     ref:
+       apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+       kind: ClassClaim 
+       name: postgresql-1
+  env:
+   - name: SECRET_KEY_BASE
+     value: 66347d769731732b443568c9b4528f6078c1a06a0e92106e686c35d6301fdb6f2be5bdb71a8d9dcf9dae7f1b150ebbd0b73730ae8ccbf003dcb703794d8bec2e
+  source:
+    git:      
+      url: https://github.com/trevorputbrese/rails-assets
+      ref:
+        branch: main

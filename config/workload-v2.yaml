@@ -4,13 +4,14 @@ metadata:
   name: rails-asset-demo
   labels:
     apps.tanzu.vmware.com/workload-type: web
-    # apps.tanzu.vmware.com/has-tests: "true"
+    apps.tanzu.vmware.com/has-tests: "true"
     app.kubernetes.io/part-of: rails-asset-demo
 spec:
   params:
-  - name: annotations
+  - name: testing_pipeline_matching_labels
     value:
-      autoscaling.knative.dev/minScale: "1"
+      apps.tanzu.vmware.com/pipeline: test
+      apps.tanzu.vmware.com/language: java
   - name: clusterBuilder
     value: full-jammy
   serviceClaims:
