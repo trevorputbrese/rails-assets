@@ -1,15 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: rails-asset-demo
-  description: Rails Asset Demo
+  name: rails-assets-demo
+  description: Rails Assets Demo
   tags:
     - app-accelerator
     - ruby
     - rails
 
   annotations:
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=rails-asset-demo'
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=rails-assets-demo'
 spec:
   type: service
   lifecycle: experimental
