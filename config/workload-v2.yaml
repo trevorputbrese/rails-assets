@@ -1,11 +1,11 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: rails-assets-demo
+  name: rails-assets-demo-prod
   labels:
     apps.tanzu.vmware.com/workload-type: web
     apps.tanzu.vmware.com/has-tests: "true"
-    app.kubernetes.io/part-of: rails-assets-demo
+    app.kubernetes.io/part-of: rails-assets-demo-prod
 spec:
   params:
   - name: testing_pipeline_matching_labels
@@ -15,11 +15,11 @@ spec:
   - name: clusterBuilder
     value: full-jammy
   serviceClaims:
-   - name: postgresql-1
+   - name: postgresql-2
      ref:
        apiVersion: services.apps.tanzu.vmware.com/v1alpha1
        kind: ClassClaim 
-       name: postgresql-1
+       name: postgresql-2
   env:
    - name: SECRET_KEY_BASE
      valueFrom:
