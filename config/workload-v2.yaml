@@ -24,7 +24,7 @@ spec:
    - name: SECRET_KEY_BASE
      valueFrom:
        secretKeyRef:
-         name: rails-asset-demo-secret-key
+         name: rails-secret-key-trev-cluster
          key: SECRET_KEY_BASE
   source:
     git:      

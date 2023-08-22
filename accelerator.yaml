@@ -1,0 +1,41 @@
+accelerator:
+  displayName: Rails Assets Accelerator
+  description: Contains just a README
+  iconUrl: https://en.wikipedia.org/wiki/File:Ruby_On_Rails_Logo.svg
+  tags:
+    - Ruby
+    - Rails
+  
+  # Place this after the 'tags' section from the previous step
+  options:
+    - name: firstConfigurableParameter
+      inputType: text
+      label: The text used to replace the first placeholder text in the README.md. Converted to lowercase.
+      defaultValue: Configurable Parameter 1
+      required: true
+    - name: secondConfigurableParameterCheckbox
+      inputType: checkbox
+      dataType: boolean
+      label: Enable to configure the second configurable parameter, otherwise use the default value.
+    - name: secondConfigurableParameter
+      inputType: text
+      label: The text used to replace the second placeholder text in the README.md. Converted to lowercase.
+      defaultValue: Configurable Parameter 2
+      dependsOn:
+        name: secondConfigurableParameterCheckbox
+  
+  # Place this after the `options` section from the previous step
+  engine:
+    merge:
+      - include: [ "README.md" ]
+        chain:
+          - type: ReplaceText
+            substitutions:
+              - text: "CONFIGURABLE_PARAMETER_1"
+                with: "#firstConfigurableParameter.toLowerCase()"
+          - condition: "#secondConfigurableParameterCheckbox"
+            chain:
+            - type: ReplaceText
+              substitutions:
+                - text: "CONFIGURABLE_PARAMETER_2"
+                  with: "#secondConfigurableParameter.toLowerCase()"
