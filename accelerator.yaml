@@ -1,7 +1,7 @@
 accelerator:
   displayName: Rails Assets Accelerator
-  description: Contains just a README
-  iconUrl: https://en.wikipedia.org/wiki/File:Ruby_On_Rails_Logo.svg
+  description: Accelerator for Ruby on Rails CIS Demo App
+  iconUrl: https://www.ruby-lang.org/images/header-ruby-logo.png
   tags:
     - Ruby
     - Rails
