@@ -11,7 +11,7 @@ spec:
   - name: testing_pipeline_matching_labels
     value:
       apps.tanzu.vmware.com/pipeline: test
-      apps.tanzu.vmware.com/language: ruby
+      apps.tanzu.vmware.com/language: ruby-rails
   - name: clusterBuilder
     value: full-jammy
   serviceClaims:
